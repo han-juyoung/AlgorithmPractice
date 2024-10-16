@@ -24,6 +24,8 @@ for i in range(len(plan)):
     if plan[i] == direction[3]:
         x += row[3]
         y += col[3]
+    if x < 1 or y < 1 or x > 5 or y > 5:
+        continue
 print(x, y)
 
 # 공간 밖에 대한 처리 필요함
