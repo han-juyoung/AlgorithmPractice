@@ -10,4 +10,4 @@ def factorial_recursive(n):
     return n * factorial_recursive(n-1)
 
 print('반복적 구현', factorial_iterative(5))
-print('재귀적 구현', factorial_recursive(5))
+print('재귀적 구현', factorial_recursive(5)) 
