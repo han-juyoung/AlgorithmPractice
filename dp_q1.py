@@ -1,20 +1,15 @@
-cal = [0] * 4
+a = [0] * 300001
 
-n = int(input())
+x = int(input())
 
-while n != 1:
-    if n % 5 == 0:
-        cal[0] += 1
-        n = n // 5
-    elif n % 3 == 0:
-        cal[1] += 1
-        n = n // 3
-    elif n % 2 == 0:
-        cal[2] += 1
-        n = n // 2
-    else:
-        cal[3] += 1
-        n -= 1
+for i in range(2, x+1):
+    a[i] = a[i-1] + 1
+    if i % 2 == 0:
+        a[i] = min(a[i] , a[i//2] + 1)
+    if i % 3 == 0:
+        a[i] = min(a[i] , a[i//3] + 1)
+    if i % 5 == 0:
+        a[i] = min(a[i] , a[i//5] + 1)
 
-print(sum(cal))
+print(a[i])
     
